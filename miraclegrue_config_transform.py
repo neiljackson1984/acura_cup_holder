@@ -72,20 +72,23 @@ def transformMiraclegrueConfig(config: dict):
     config['supportFillProfiles']['base_layer_surface']['consistentOrder'] = True
     config['supportFillProfiles']['base_layer_surface']['density'] = 0.16
     config['supportFillProfiles']['base_layer_surface']['orientationOffset'] = 45
-    config['supportFillProfiles']['solid']['density'] = 0.32
+    config['supportFillProfiles']['solid']['density'] = 0.20
     config['supportFillProfiles']['solid']['orientationOffset'] = 45
     config['supportFillProfiles']['solid']['pattern'] = "hilbert_fill"
     config['supportFillProfiles']['sparse']['consistentOrder'] = True
-    config['supportFillProfiles']['sparse']['density'] = 0.16
+    config['supportFillProfiles']['sparse']['density'] = 0.10
     config['supportFillProfiles']['sparse']['orientationOffset'] = 45
     config['supportRoofSolidThickness'] = 3.0
     config['supportType'] = "breakaway"
-
+    config['supportLayerHeight'] = 0.4
+    
     config['extruderProfiles'][0]['extrusionProfiles']['base_layer_surface']['fanSpeed'] = 0
     config['extruderProfiles'][0]['extrusionProfiles']['base_layer_surface']['feedrate'] = min(config['extruderProfiles'][0]['extrusionProfiles']['base_layer_surface']['feedrate'], 15) 
 
     config['modelShellProfiles']['base_layer_surface']['numberOfShells'] = 3
     config['modelShellProfiles']['extent']['numberOfShells'] = 3
+
+    
 
     return config
 
